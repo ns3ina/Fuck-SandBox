@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         
         name = sandBox.appsName() as! [String]
         bundle = sandBox.appsBundle() as! [String]
-        version = sandBox.appsVersions() as! [String]
         type = sandBox.appsType() as! [String]
         
         tableView.delegate = self
@@ -48,7 +47,6 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell") as! TableViewCell
         cell.appName.text = name[indexPath.row]
         cell.appBundle.text = bundle[indexPath.row]
-        cell.appVersion.text = version[indexPath.row]
         cell.appType.text = type[indexPath.row]
         
         return cell;
